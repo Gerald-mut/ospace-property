@@ -4,6 +4,7 @@
  */
 
 import { motion } from 'motion/react';
+import houseImg from '../assets/house.jpg';
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://lh3.googleusercontent.com/aida/ADBb0ujS_3_VDdfGoviLs6FGmCnxkwuOuuwg1S45pH8_PScf0IUBvu2z6TjGnhQm_fVnh0GwZ5CMN9-h1zKA1SLb6gOFTM1yba8bMY1aX8H1Svips1CLxPJhmk5JFKkW_u5tllJuNVOjSP0Uolxp8B2ey8H7IdyItOIXxy180cdmovuQ1woJ0tdMHuzdfZZY8rllY3VxdMIsRe2fhbcH5HKmEuvejlEVX0cefFL_OUAFBS9QhPPwOLsBM2Gy3cAaZemhNqRZUf-ig5M4yQ" 
+          src={houseImg} 
           alt="Luxury Property Background" 
           className="w-full h-full object-cover object-top"
         />
@@ -47,14 +48,7 @@ export default function Hero() {
             Built on a Standard of Excellence.
           </motion.h2>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-sans font-light text-white/80 text-lg md:text-xl max-w-xl mb-12 leading-relaxed"
-          >
-            Premium property oversight and architectural landscaping for discerning owners across Kenya.
-          </motion.p>
+
 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}

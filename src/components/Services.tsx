@@ -5,37 +5,43 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import houseImg from '../assets/house.jpg';
+import landscapeImg from '../assets/landscape.jpg';
+import landscapeMaintenanceImg from '../assets/landscape-maintenance.jpg';
+import cleaningImg from '../assets/cleaning.jpg';
+import fumigationImg from '../assets/fumigation.jpg';
+import swimmingPoolImg from '../assets/swimming-pool.jpg';
 
 const services = [
   {
     title: 'Property & Home Management',
     description: 'Comprehensive end-to-end management of residential and commercial properties. Inspections, maintenance scheduling, tenant coordination, and financial reporting.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0ujRhFkG8hMD3AKoEI8Hm88IF-NA70IN7p8SB6cu9JjuC2jpcNPLz0sCgZBbYBS63ndfyMDfuTMFyRDPUhoMrC4Ff1HCM4Hzjw3u7yikMeFCG78BRKxUpdD2In62wXvcreca6-Hg8XwQpXgqX-TNoZ9WJcoOJjpHFMrpTJAuXFr3abreR3BPPF7-YsMUPrSdV-09nRknNX0Wawcl1agV-XsYPCBy0O-fqtvB1My2sf5vVtUP0hGdNUua7o7aMgHzLY8g-HOt5ChQwg'
+    image: houseImg
   },
   {
     title: 'Landscaping & Ground Design',
     description: 'Architectural-grade landscaping including soft scaping, planting, irrigation installation, landscape lighting, property grading and drainage solutions.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0ujsnAQlxZkOc9muYkk8TqoINx_HTlgXroQdzNaYTBQ7Bf3FTU0XaspSVCmmM-k0k8Ij2rPYJxza32JUjH-C_EXWD6VeHXvkhW1yW1nT5eLxZs36M4-8RFwyuqYRBC3fi7r-1F-XcXPBdpfo7vEumUccEdjrrWKbwcbRoM3mTVdAd7gQoIkJKvW4J7uTpGvsvUI07t8dyFNcv3ZDDzwWRhrRnU9FrIXU8AzacH2tXHurgQIjbfm7kfpo23_pneG8NCE_7nLhkTeJTQ'
+    image: landscapeImg
   },
   {
     title: 'Lawn & Garden Maintenance',
     description: 'Year-round grounds care including lawn mowing, fertilizer and soil management, top dressing, weed and pest management (IPM), pruning, trimming and hedging.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0uiaAiq2X_obSQSgjYZtlfSBdUtqMtfxPscsa9v3CybTTkCzFj_2k9C_pCwHrL3LhNz-FbqpkxBivLf_k7A4Hl39VsyhW97reQiAqy5pzHCWaemYVdbQ9-0ze8ek0253hGrR-BCl-Ev0HbrNh9oorZG6eXr3AjgbBlJQUYYq8Ex0Y1LJJPYbOLM3hNcqjiKEv_m5oIVG9iCijgg8P0r_vYMcgzac8t7z1XVCqFGfPkcvy3pbIsko7pM3ML1FMiylxH2e5vaTgQrt'
+    image: landscapeMaintenanceImg
   },
   {
     title: 'Cleaning & Detailing',
     description: 'Deep cleaning, detailing, post-construction clean-ups, and exterior compound cleaning including parking areas.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0uibjla9bUgVeI4Xo4Y7Kn720iJcB61TQHA4rN74-M_sDF0iwszONUXnkMNiz_k1IU2YCBVq8f34xewJweBppPadAfMCz9qtLDGhPqK_UoQ95Chn00kmA8uLaycAe-gcHDnBT9ex0EmxLNKfyibgDjfsi91SgyRMR6ha2uBTg1U9uKPfGKMosaWt0C_Zni94AVc4Zp4sWc245pBs2quXik9rrfljtWGRVMcQWaaXL1HKeez3T4vjHpjZmWFcAY7U0eOo9Vluh1ByuA'
+    image: cleaningImg
   },
   {
     title: 'Fumigation & Pest Control',
     description: 'Certified fumigation and integrated pest management using industry-approved treatments for residential and commercial properties.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0ujtseWk4EPEz6gP_hdA9lwVXbv_0huwctLzEZXNC-RkNM38Swz1WF2u99ITNLYDNKSusDbDL0yTNl7AtXiHTmRthGxIwzcrQf2bRvTA2SbbUE54CNEc0utG9eieEE9T3OGTPQB-K8_rUvQPaFH49EtZAKgHBKSi-EuReOcAv-8gfgya3anYX_NgL58YLBvjkmBMlPdWsFlbRG4COJ3C-Gw2war5Hs08QrUGMiCCd21cG_dH7H5p5a0DLZiB0Miftrqi8ZyQ5-nVoA'
+    image: fumigationImg
   },
   {
     title: 'Design & Consultancy',
     description: 'Exterior redesign, landscape concept planning, and strategic property consultancy for owners, investors, and developers.',
-    image: 'https://lh3.googleusercontent.com/aida/ADBb0uiWegB69_foie27Zb4IigXh2Eh08jGAS2uy1AZhE-zg8QiWfnQiZgwpvVq4RFFAOfud_12bIchTwkFyoj4kxUG_i7a-blqDX0QCYN5U7eioM1wdtwvNrv_pxX2D1hMp25wJ9zWSl5qDYcLnHRDRijjA8T2pZzh3XYxZHKnmcbG2a65P9K-gH4R41zMkTGzlBjj4KnvEuw86DAAvK4j310dgLltnsq3Gqyq2cT58YH--cF4Dn-asZnnYweOnDkKOGWkBeWKr84pv'
+    image: swimmingPoolImg
   }
 ];
 
