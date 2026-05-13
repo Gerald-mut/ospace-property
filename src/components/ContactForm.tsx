@@ -5,6 +5,7 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import fullLogo from '../assets/full-logo.png';
 
 export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,6 +27,7 @@ export default function ContactForm() {
     <section id="contact" className="py-32 md:py-48 bg-white px-8">
       <div className="max-w-xl mx-auto w-full">
         <div className="text-center mb-16">
+          <img src={fullLogo} alt="OSpace Logo" className="h-16 w-auto object-contain opacity-80 mx-auto mb-6" />
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

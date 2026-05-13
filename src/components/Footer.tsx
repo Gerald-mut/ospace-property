@@ -4,6 +4,7 @@
  */
 
 import { MessageSquare } from 'lucide-react';
+import fullLogo from '../assets/full-logo.png';
 
 export default function Footer() {
   return (
@@ -12,17 +13,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 pb-20 border-b border-white/5">
           {/* Logo and About */}
           <div className="md:col-span-4 lg:col-span-5 pr-4 md:pr-12">
-            <div className="flex flex-col mb-10">
-              <img 
-                src="/group_2.png" 
-                alt="Ospace Icon" 
-                className="h-20 w-auto mb-4 object-contain brightness-0 invert"
-                onError={(e) => {
-                  // Fallback if image fails
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
-              <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-8">OSpace Properties</h2>
+            <div className="flex flex-col mb-10 items-start">
+              <img src={fullLogo} alt="OSpace Properties Logo" className="h-48 md:h-64 w-auto object-contain object-left mb-8" />
             </div>
             <p className="text-white/50 font-serif leading-relaxed italic text-lg max-w-sm">
               Setting the gold standard in property management and architectural landscaping in Kenya.

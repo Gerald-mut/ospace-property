@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import logoIcon from '../assets/logo-icon.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,11 +28,14 @@ export default function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 px-8 md:px-12 py-4 md:py-5 flex justify-between items-center ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent'
         }`}
     >
-      <div className={`text-xl md:text-2xl font-bold tracking-[0.3em] font-serif transition-colors flex items-center ${isScrolled ? 'text-brand-navy-light' : 'text-white md:text-brand-navy-light'
-        }`}>
-        <span className="text-brand-red">O</span>
-        <span className="text-brand-green">SPACE</span>
-      </div>
+      <a href="#home" className="flex items-center gap-3">
+        <img src={logoIcon} alt="OSpace Logo" className="h-10 w-auto object-contain" />
+        <div className={`text-xl md:text-2xl font-bold tracking-[0.3em] font-serif transition-colors flex items-center ${isScrolled ? 'text-brand-navy-light' : 'text-white md:text-brand-navy-light'
+          }`}>
+          <span className="text-brand-red">O</span>
+          <span className="text-brand-green">SPACE</span>
+        </div>
+      </a>
 
       {/* Desktop Nav */}
       <nav className="hidden md:flex space-x-12">
