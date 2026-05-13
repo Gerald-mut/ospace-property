@@ -32,32 +32,25 @@ export default function Footer() {
           <div className="md:col-span-5 lg:col-span-5">
             <h4 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold mb-10">Get In Touch</h4>
             <div className="flex flex-col gap-8">
-              <p className="text-white/50 leading-relaxed max-w-md">
-                We operate from two conveniently located offices across the Nairobi region.
-              </p>
+              <div className="flex flex-col gap-2">
+                <p className="text-white/50 leading-relaxed max-w-md">
+                  We invite you to visit our primary office:
+                </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <h5 className="font-bold text-sm mb-2">Kiambu Office:</h5>
-                  <p className="text-white/60 text-sm leading-relaxed">
-                    Kikinga House, 1st Floor,<br />
-                    Room F1, Kiambu Town,<br />
-                    Kiambu County.
-                  </p>
-                </div>
-                <div>
-                  <h5 className="font-bold text-sm mb-2">Nairobi Office:</h5>
-                  <p className="text-white/60 text-sm leading-relaxed">
-                    Kikinga House, 1st Floor,<br />
-                    Room 1, Westlands,<br />
-                    Nairobi.
-                  </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-white/60 text-sm leading-relaxed">
+                      Kikinga House, 1st Floor,<br />
+                      Room F1, Kiambu Town,<br />
+                      Kiambu County.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="space-y-2">
                 <p className="text-white/40 text-xs">P.O. Box 2680 – 00100</p>
-                <p className="text-white/80 font-serif text-lg">+254 741 895 272</p>
+                <p className="text-white/80 font-serif text-lg">+254 741 895 272 | +254 708 316 804 | +254 119 692 321</p>
                 <p className="text-white/80 font-mono text-sm tracking-tight overflow-hidden text-ellipsis">Ospacepropertymanagement@gmail.com</p>
               </div>
 
@@ -77,7 +70,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/20 font-sans text-[10px] uppercase tracking-widest">
-            © 2024 OSPACE Properties Management. All rights reserved.
+            © OSPACE Properties Management. All rights reserved.
           </p>
           <p className="text-white/20 font-sans text-[10px] uppercase tracking-widest text-center">
             Built with excellence in Nairobi, Kenya.

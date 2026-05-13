@@ -9,7 +9,6 @@ import Services from './components/Services';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Statement from './components/Statement';
-import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 
@@ -23,7 +22,6 @@ export default function App() {
         <About />
         <Portfolio />
         <Statement />
-        <Testimonials />
         <ContactForm />
       </main>
       <Footer />

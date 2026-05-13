@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import swimmingPoolImg from '../assets/swimming-pool.jpg';
@@ -13,6 +13,9 @@ import landscape2Img from '../assets/landscape2.jpg';
 import landscape3Img from '../assets/landscape3.jpg';
 import landscapewindowImg from '../assets/landscapewindow.jpg';
 import washroomImg from '../assets/washroom.jpg';
+import gate2Img from '../assets/gate2.jpg';
+import landscape4Img from '../assets/landscape4.jpg';
+import road2Img from '../assets/road2.jpg';
 
 const allProjects = [
   {
@@ -41,13 +44,13 @@ const allProjects = [
   },
   {
     id: 5,
-    title: 'Interior Fit-Out & Cabinetry',
+    title: 'Modern Villa',
     image: houseImg,
     gridArea: 'md:col-span-8 md:row-span-2'
   },
   {
     id: 6,
-    title: 'Modern Villa',
+    title: 'Interior Fit-Out & Cabinetry',
     image: closetImg,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
@@ -86,6 +89,24 @@ const allProjects = [
     title: 'Bespoke Amenities',
     image: washroomImg,
     gridArea: 'md:col-span-4 md:row-span-1'
+  },
+  {
+    id: 13,
+    title: 'Grand Entrances',
+    image: gate2Img,
+    gridArea: 'md:col-span-4 md:row-span-1'
+  },
+  {
+    id: 14,
+    title: 'Paved Walkways',
+    image: road2Img,
+    gridArea: 'md:col-span-4 md:row-span-1'
+  },
+  {
+    id: 15,
+    title: 'Verdant Lawns',
+    image: landscape4Img,
+    gridArea: 'md:col-span-4 md:row-span-1'
   }
 ];
 
@@ -97,7 +118,7 @@ export default function Portfolio() {
     e.preventDefault();
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleCount(12);
+      setVisibleCount(15);
       setIsLoading(false);
     }, 400);
   };
@@ -108,7 +129,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-24 md:py-32 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 md:px-12">
         <div className="mb-20">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -116,7 +137,7 @@ export default function Portfolio() {
           >
             Our Work
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -127,7 +148,7 @@ export default function Portfolio() {
         </div>
 
         <LayoutGroup>
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-12 md:auto-rows-[300px] gap-1">
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-12 gap-1" style={{ gridAutoRows: 'minmax(300px, auto)' }}>
             <AnimatePresence mode="popLayout">
               {visibleProjects.map((project, index) => (
                 <motion.div
@@ -136,14 +157,14 @@ export default function Portfolio() {
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.92 }}
-                  transition={{ 
-                    delay: index >= 6 ? (index - 6) * 0.12 : index * 0.1, 
-                    duration: 0.5 
+                  transition={{
+                    delay: index >= 6 ? (index - 6) * 0.12 : index * 0.1,
+                    duration: 0.5
                   }}
                   className={`relative overflow-hidden group cursor-pointer aspect-square md:aspect-auto ${project.gridArea}`}
                 >
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
                   />
@@ -164,9 +185,8 @@ export default function Portfolio() {
               layout
               href="#"
               onClick={loadMore}
-              className={`inline-flex items-center justify-center gap-4 px-12 py-5 border border-brand-navy text-brand-navy font-sans text-[11px] uppercase tracking-[0.2em] transition-all duration-300 group min-w-[240px] ${
-                isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:text-brand-green hover:border-brand-green'
-              }`}
+              className={`inline-flex items-center justify-center gap-4 px-12 py-5 border border-brand-navy text-brand-navy font-sans text-[11px] uppercase tracking-[0.2em] transition-all duration-300 group min-w-[240px] ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:text-brand-green hover:border-brand-green'
+                }`}
             >
               {isLoading ? (
                 <Loader2 size={16} className="animate-spin text-brand-navy" />
