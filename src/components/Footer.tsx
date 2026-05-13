@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { MessageSquare } from 'lucide-react';
 import fullLogo from '../assets/full-logo.png';
 
@@ -17,7 +12,7 @@ export default function Footer() {
               <img src={fullLogo} alt="OSpace Properties Logo" className="h-48 md:h-64 w-auto object-contain object-left mb-8" />
             </div>
             <p className="text-white/50 font-serif leading-relaxed italic text-lg max-w-sm">
-              Setting the gold standard in property management and architectural landscaping in Kenya.
+              Setting the standard in property management and architectural landscaping in Kenya.
             </p>
           </div>
 
@@ -40,7 +35,7 @@ export default function Footer() {
               <p className="text-white/50 leading-relaxed max-w-md">
                 We operate from two conveniently located offices across the Nairobi region.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h5 className="font-bold text-sm mb-2">Kiambu Office:</h5>
@@ -66,7 +61,7 @@ export default function Footer() {
                 <p className="text-white/80 font-mono text-sm tracking-tight overflow-hidden text-ellipsis">Ospacepropertymanagement@gmail.com</p>
               </div>
 
-              <a 
+              <a
                 href="https://wa.me/254741895272"
                 target="_blank"
                 rel="noreferrer"

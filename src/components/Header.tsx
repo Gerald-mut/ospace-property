@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoIcon from '../assets/logo-icon.png';
+import iconSvg from '../assets/icon.svg';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,8 +18,8 @@ export default function Header() {
   const navLinks = [
     { name: 'Home', href: '#' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
     { name: 'About', href: '#about' },
+    { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -29,7 +29,7 @@ export default function Header() {
         }`}
     >
       <a href="#home" className="flex items-center gap-3">
-        <img src={logoIcon} alt="OSpace Logo" className="h-10 w-auto object-contain" />
+        <img src={iconSvg} alt="OSpace Icon" className="h-10 w-auto object-contain" />
         <div className={`text-xl md:text-2xl font-bold tracking-[0.3em] font-serif transition-colors flex items-center ${isScrolled ? 'text-brand-navy-light' : 'text-white md:text-brand-navy-light'
           }`}>
           <span className="text-brand-red">O</span>
