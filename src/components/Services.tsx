@@ -35,8 +35,8 @@ const services = [
     image: fumigationImg
   },
   {
-    title: 'Design & Consultancy',
-    description: 'Exterior redesign, landscape concept planning, and strategic property consultancy for owners, investors, and developers.',
+    title: 'Apartment Management and Maintenance',
+    description: 'Comprehensive management of apartment complexes, including tenant relations, facility maintenance, security oversight, and common area upkeep.',
     image: apartmentsImg
   }
 ];

@@ -75,7 +75,7 @@ export default function ContactForm() {
               <option value="lawn">Lawn & Garden Maintenance</option>
               <option value="cleaning">Cleaning & Detailing</option>
               <option value="fumigation">Fumigation & Pest Control</option>
-              <option value="design">Design & Consultancy</option>
+              <option value="apartment">Apartment Management and Maintenance</option>
             </select>
           </div>
           <div className="relative">
