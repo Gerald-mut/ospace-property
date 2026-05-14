@@ -39,15 +39,18 @@
       "priceRange": "KES",
       "currenciesAccepted": "KES",
       "paymentAccepted": "Cash, Bank Transfer, M-Pesa",
-      "areaServed": ["Nairobi", "Kiambu", "Westlands", "Karen", "Muthaiga"],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      },
       "address": [
-        {
+        <!-- {
           "@type": "PostalAddress",
           "streetAddress": "Kikinga House, 1st Floor, Room 1",
           "addressLocality": "Westlands",
           "addressRegion": "Nairobi",
           "addressCountry": "KE"
-        },
+        }, -->
         {
           "@type": "PostalAddress",
           "streetAddress": "Kikinga House, 1st Floor, Room F1",
@@ -57,12 +60,20 @@
         }
       ],
       "sameAs": [],
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "OSpace Services",
