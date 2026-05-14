@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { motion } from 'motion/react';
 import houseImg from '../assets/house.jpg';
 
@@ -13,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={houseImg} 
-          alt="Luxury Property Background" 
+          alt="Luxury property managed by OSpace in Nairobi Kenya" 
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/30 md:bg-transparent md:bg-gradient-to-r md:from-black/40 md:to-transparent"></div>
@@ -39,14 +34,14 @@ export default function Hero() {
             Curating Luxury<br />Environments.
           </motion.h1>
 
-          <motion.h2 
+          <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-3xl md:text-5xl text-brand-green mb-10 font-bold"
           >
             Built on a Standard of Excellence.
-          </motion.h2>
+          </motion.p>
 
 
 

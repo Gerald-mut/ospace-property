@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 pb-20 border-b border-white/5">
           {/* Logo and About */}
           <div className="md:col-span-4 lg:col-span-5 pr-4 md:pr-12">
-            <div className="flex flex-col mb-10 items-start">
-              <img src={fullLogo} alt="OSpace Properties Logo" className="h-48 md:h-64 w-auto object-contain object-left mb-8" />
+            <div className="flex flex-col mb-10 items-center md:items-start">
+              <img src={fullLogo} alt="OSpace Properties Management Ltd" className="h-48 md:h-64 w-auto object-contain object-center md:object-left mb-8" />
             </div>
-            <p className="text-white/50 font-serif leading-relaxed italic text-lg max-w-sm">
+            <p className="text-white/50 font-serif leading-relaxed italic text-lg max-w-sm text-center md:text-left mx-auto md:mx-0">
               Setting the standard in property management and architectural landscaping in Kenya.
             </p>
           </div>
@@ -33,17 +33,17 @@ export default function Footer() {
             <h4 className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold mb-10">Get In Touch</h4>
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-2">
-                <p className="text-white/50 leading-relaxed max-w-md">
-                  We invite you to visit our primary office:
-                </p>
+              <p className="text-white/50 leading-relaxed max-w-md">
+                We invite you to visit our primary office:
+              </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-white/60 text-sm leading-relaxed">
-                      Kikinga House, 1st Floor,<br />
-                      Room F1, Kiambu Town,<br />
-                      Kiambu County.
-                    </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    Kikinga House, 1st Floor,<br />
+                    Room F1, Kiambu Town,<br />
+                    Kiambu County.
+                  </p>
                   </div>
                 </div>
               </div>

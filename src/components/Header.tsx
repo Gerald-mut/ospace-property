@@ -29,7 +29,7 @@ export default function Header() {
         }`}
     >
       <a href="#home" className="flex items-center gap-3">
-        <img src={iconSvg} alt="OSpace Icon" className="h-10 w-auto object-contain" />
+        <img src={iconSvg} alt="OSpace Properties Management Ltd Logo" className="h-10 w-auto object-contain" />
         <div className={`text-xl md:text-2xl font-bold tracking-[0.3em] font-serif transition-colors flex items-center ${isScrolled ? 'text-brand-navy-light' : 'text-white md:text-brand-navy-light'
           }`}>
           <span className="text-brand-red">O</span>

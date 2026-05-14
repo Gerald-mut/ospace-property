@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'motion/react';
-import { ArrowRight, Loader2 } from 'lucide-react';
+import { ArrowRight, Loader2, X } from 'lucide-react';
 import swimmingPoolImg from '../assets/swimming-pool.jpg';
 import roadImg from '../assets/road.jpg';
 import landscapeImg from '../assets/landscape.jpg';
@@ -16,6 +16,7 @@ import washroomImg from '../assets/washroom.jpg';
 import gate2Img from '../assets/gate2.jpg';
 import landscape4Img from '../assets/landscape4.jpg';
 import road2Img from '../assets/road2.jpg';
+import apartmentImg from '../assets/apartment.jpg';
 
 const allProjects = [
   {
@@ -26,13 +27,13 @@ const allProjects = [
   },
   {
     id: 2,
-    title: 'Multi-Storey Residential Block',
+    title: 'Estate Maintenance',
     image: roadImg,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
   {
     id: 3,
-    title: 'Manicured Garden & Grounds',
+    title: 'Landscape Designing & Decor',
     image: landscapeImg,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
@@ -56,31 +57,31 @@ const allProjects = [
   },
   {
     id: 7,
-    title: 'Premium Hardscaping',
+    title: 'Premium Landscaping',
     image: landscape2Img,
     gridArea: 'md:col-span-8 md:row-span-2'
   },
   {
     id: 8,
-    title: 'Modern Architecture',
+    title: 'Landscape Maintenance',
     image: landscape3Img,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
   {
     id: 9,
-    title: 'Secure Enclosures',
+    title: 'Cabro Cleaning & Maintenance',
     image: gateImg,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
   {
     id: 10,
-    title: 'Luxury Interiors',
+    title: 'Post Construction Cleaning',
     image: house2Img,
     gridArea: 'md:col-span-4 md:row-span-1'
   },
   {
     id: 11,
-    title: 'Scenic Views',
+    title: 'Residential Management & Letting',
     image: landscapewindowImg,
     gridArea: 'md:col-span-8 md:row-span-2'
   },
@@ -107,20 +108,36 @@ const allProjects = [
     title: 'Verdant Lawns',
     image: landscape4Img,
     gridArea: 'md:col-span-4 md:row-span-1'
+  },
+  {
+    id: 16,
+    title: 'Apartments Management',
+    image: apartmentImg,
+    gridArea: 'md:col-span-8 md:row-span-2'
   }
 ];
 
 export default function Portfolio() {
   const [visibleCount, setVisibleCount] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
+  const [activeProject, setActiveProject] = useState<number | null>(null);
 
   const loadMore = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setTimeout(() => {
-      setVisibleCount(15);
+      setVisibleCount(allProjects.length);
       setIsLoading(false);
     }, 400);
+  };
+
+  const closePortfolio = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setVisibleCount(6);
+    const element = document.getElementById('portfolio');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const visibleProjects = allProjects.slice(0, visibleCount);
@@ -141,7 +158,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-brand-navy font-serif text-5xl md:text-7xl leading-tight"
+            className="text-brand-navy font-serif text-4xl sm:text-5xl md:text-7xl leading-tight"
           >
             Transformations That<br />Speak for Themselves
           </motion.h2>
@@ -150,7 +167,9 @@ export default function Portfolio() {
         <LayoutGroup>
           <motion.div layout className="grid grid-cols-1 md:grid-cols-12 gap-1" style={{ gridAutoRows: 'minmax(300px, auto)' }}>
             <AnimatePresence mode="popLayout">
-              {visibleProjects.map((project, index) => (
+              {visibleProjects.map((project, index) => {
+                const isActive = activeProject === project.id;
+                return (
                 <motion.div
                   layout
                   key={project.id}
@@ -161,20 +180,21 @@ export default function Portfolio() {
                     delay: index >= 6 ? (index - 6) * 0.12 : index * 0.1,
                     duration: 0.5
                   }}
+                  onClick={() => setActiveProject(isActive ? null : project.id)}
                   className={`relative overflow-hidden group cursor-pointer aspect-square md:aspect-auto ${project.gridArea}`}
                 >
                   <img
                     src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
+                    alt={`${project.title} by OSpace in Nairobi and Kiambu, Kenya`}
+                    className={`w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110 ${isActive ? 'scale-110' : ''}`}
                   />
-                  <div className="absolute inset-0 bg-brand-navy-light/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <h3 className="font-serif text-white text-2xl md:text-3xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className={`absolute inset-0 bg-brand-navy-light/60 transition-opacity duration-500 flex items-center justify-center ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <h3 className={`font-serif text-white text-2xl md:text-3xl transition-transform duration-500 text-center px-4 ${isActive ? 'translate-y-0' : 'translate-y-4 group-hover:translate-y-0'}`}>
                       {project.title}
                     </h3>
                   </div>
                 </motion.div>
-              ))}
+              )})}
             </AnimatePresence>
           </motion.div>
         </LayoutGroup>
@@ -198,13 +218,15 @@ export default function Portfolio() {
               )}
             </motion.a>
           ) : (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="font-montserrat font-light text-gray-400 uppercase tracking-widest text-sm"
+            <motion.a
+              layout
+              href="#"
+              onClick={closePortfolio}
+              className="inline-flex items-center justify-center gap-4 px-12 py-5 border border-brand-navy text-brand-navy font-sans text-[11px] uppercase tracking-[0.2em] transition-all duration-300 group min-w-[240px] hover:text-brand-green hover:border-brand-green"
             >
-              You've seen all our work
-            </motion.p>
+              Close Portfolio
+              <X size={16} className="group-hover:rotate-90 transition-transform duration-300" />
+            </motion.a>
           )}
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function About() {
             <div className="aspect-square relative z-10">
               <img
                 src={fountain}
-                alt="About Ospace"
+                alt="About OSpace Properties Management Ltd heritage and property care in Kenya"
                 className="w-full h-full object-cover rounded-sm shadow-2xl"
               />
             </div>
@@ -44,11 +44,11 @@ export default function About() {
 
             <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100 relative z-10">
               <div>
-                <h4 className="font-serif text-brand-navy text-xl mb-2">Discrete Service</h4>
+                <h3 className="font-serif text-brand-navy text-xl mb-2">Discrete Service</h3>
                 <p className="text-gray-400 text-sm">Confidentiality and efficiency in every operation.</p>
               </div>
               <div>
-                <h4 className="font-serif text-brand-navy text-xl mb-2">Scaleable Care</h4>
+                <h3 className="font-serif text-brand-navy text-xl mb-2">Scaleable Care</h3>
                 <p className="text-gray-400 text-sm">Services customized for single homes or vast estates.</p>
               </div>
             </div>
