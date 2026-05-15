@@ -51,7 +51,7 @@ export default function Footer() {
               <div className="space-y-2">
                 <p className="text-white/40 text-xs">P.O. Box 2680 – 00100</p>
                 <p className="text-white/80 font-serif text-lg">+254 741 895 272 | +254 708 316 804 | +254 119 692 321</p>
-                <p className="text-white/80 font-mono text-sm tracking-tight overflow-hidden text-ellipsis">Ospacepropertymanagement@gmail.com</p>
+                <a href="mailto:info@ospacepropertymanagement.com" className="text-white/80 font-mono text-sm tracking-tight overflow-hidden text-ellipsis hover:text-white transition-colors block">info@ospacepropertymanagement.com</a>
               </div>
 
               <a
